@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:pixelsize=25:antialias=true:autohint=true";
+static char *font = "FiraMono Nerd Font:size=20:antialias=true:autohint=true";
 static char *font2[] = { "JoyPixels:pixelsize=16:antialias=true:autohint=true" };
 static int borderpx = 15;
 
@@ -113,40 +113,36 @@ float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"#45475A",
-	"#F38BA8",
-	"#A6E3A1",
-	"#F9E2AF",
-	"#89B4FA",
-	"#F5C2E7",
-	"#94E2D5",
-	"#BAC2DE",
-
-	/* 8 bright colors */
-	"#585B70",
-	"#F38BA8",
-	"#A6E3A1",
-	"#F9E2AF",
-	"#89B4FA",
-	"#F5C2E7",
-	"#94E2D5",
-	"#A6ADC8",
-
-[256] = "#CDD6F4", /* default foreground colour */
-[257] = "#1E1E2E", /* default background colour */
-[258] = "#F5E0DC", /*575268*/
-
-};
-
-
-/*
- * foreground, background, cursor, reverse cursor
- */
+	 	/* 8 normal colors */
+		"#3b4252", /* black   */
+		"#bf616a", /* red     */
+		"#a3be8c", /* green   */
+		"#ebcb8b", /* yellow  */
+		"#81a1c1", /* blue    */
+		"#b48ead", /* magenta */
+		"#88c0d0", /* cyan    */
+		"#e5e9f0", /* white   */
+	 
+	 	/* 8 bright colors */
+		"#4c566a", /* black   */
+		"#bf616a", /* red     */
+		"#a3be8c", /* green   */
+		"#ebcb8b", /* yellow  */
+		"#81a1c1", /* blue    */
+		"#b48ead", /* magenta */
+		"#8fbcbb", /* cyan    */
+		"#eceff4", /* white   */
+	 
+		[256] = "#d8dee9", /* default foreground colour */
+		[257] = "#2e3440", /* default background colour */
+		[258] = "#F5E0DC", /*575268*/
+		 };
+ 
+ 
 unsigned int defaultfg = 256;
 unsigned int defaultbg = 257;
-unsigned int defaultcs = 258;
-static unsigned int defaultrcs = 258;
+unsigned int defaultcs = 256;
+static unsigned int defaultrcs = 257;
 unsigned int background = 257;
 
 /*
@@ -156,7 +152,7 @@ unsigned int background = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers
